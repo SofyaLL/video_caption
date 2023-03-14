@@ -1,0 +1,121 @@
+A group of soldiers are in a room with a fire.
+A group of soldiers in a room with a blue and red flag.
+A group of players are in a game of fetch.
+A group of players are in a room with a blue and red flag.
+A group of robots that are on a board.
+A group of players are jumping on a board.
+A group of players are jumping on a board.
+A group of blue and red lights are on a board game.
+A group of players in a game of soccer.
+A group of blue and red lights are on a board.
+A group of blue and red lights are on a board.
+A group of blue and red lights are on a board.
+A group of players on a board game.
+A group of players on a board game.
+A group of players on a board game.
+A group of players on a board game.
+A group of players on a board game.
+A group of players on a board game.
+A blue and red team is jumping on a wall.
+A blue and red team is jumping on a wall.
+A board with a bunch of different types of players.
+A group of players are building a game.
+A board with a bunch of different types of robots.
+A blue and red team is on a board.
+A group of blue and red lights are on a board.
+A board game with a bunch of different players.
+A board game with a ton of different characters.
+A group of robots that are on a board game.
+A group of players playing a game of baseball.
+A group of people playing a game on a board.
+A group of kids playing with a computer on a wall.
+A group of kids playing with their own computer chips.
+A board with a number of different types of power.
+A board game with a bunch of kids on it.
+A board game with a ton of different characters.
+A board game with a bunch of people playing.
+A board game with a bunch of players on it.
+A board with a bunch of different types of blocks.
+A board game with a bunch of players on it.
+A board with a bunch of different characters on it.
+A board with a bunch of blue and red lights.
+A board with a bunch of different characters on it.
+A board with a bunch of blue and red lights.
+A board game with a few players on it.
+A board game with a bunch of players on it.
+A board with a bunch of blue and red lights.
+A board with a bunch of players on it.
+A blue and red game of baseball on a board.
+A board game with a giant blue and red caps.
+A board with a bunch of blue and red caps.
+A board with a number of players on it.
+A board with a number of different colored lights on it.
+A blue wall with a blue led lighting up.
+A blue and red board with a blue and red lights.
+A blue and red board with a bunch of lights on it.
+A blue bubble with a blue ball on it.
+A board with a lot of lights on it.
+A blue and red block with a blue and red team.
+A blue and red laser light is on a wall.
+A blue and red game with a lit bubble on top of it.
+A blue and red block with a blue and red led.
+A blue and red block with a blue and red ball.
+A blue wall with a blue ball and a blue ball.
+A blue and red board with a blue and red team.
+A blue and red board with a blue and red player.
+A blue and red model of a game.
+A blue and red model of a game of football.
+A blue and red model of a game.
+A blue and red model of a game with a blue and red team.
+A blue and red model of a game.
+A blue and red model of a game.
+A blue and red model of a game of football.
+A team of players on a team of blue and red.
+A team of kids playing in a game of ice hockey.
+A blue and red model of a game.
+A blue and red model of a game with a blue and red player.
+A blue and red model of a game.
+A blue and red model of a game.
+A group of kids are playing with a game of baseball.
+A group of players on a team playing a game.
+A group of kids are jumping on a board game.
+A blue and red model of a game with a player on the ground.
+A blue and red model of a game with a player on the ground.
+A blue and red model of a game with a player on the ground.
+A group of kids are playing with a game of football.
+A model of a game of baseball with a player on the ground.
+A team of players on a team of robots.
+A group of people are on a team game.
+A group of blue and red robots are on a team.
+A model of a game of football.
+A group of people are playing a game of defense.
+A group of people are playing a game of football.
+A group of people are playing a game of football.
+A group of people are playing a game of rock and roll.
+A group of kids playing with a computer on a floor.
+A group of kids are playing with a game of ping pong.
+A group of kids are playing with a video game.
+A group of kids playing with a prop.
+A group of kids playing with a prop.
+A blue and red model of a game.
+A blue and yellow model of a game.
+A blue and yellow model of a game.
+A fire hydrant is shown in a photo.
+A blue and red model of a game.
+A group of people are on a team game.
+A group of people are on a game of football.
+A group of people are on a board game.
+A group of kids are playing with a prop.
+A group of people are on a board game.
+A group of people are on a team game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+Counter({'A group of people are on a board game.': 12, 'A blue and red model of a game.': 9, 'A group of players on a board game.': 6, 'A group of blue and red lights are on a board.': 4, 'A board game with a bunch of players on it.': 3, 'A board with a bunch of blue and red lights.': 3, 'A blue and red model of a game with a player on the ground.': 3, 'A group of people are on a team game.': 3, 'A group of players are jumping on a board.': 2, 'A blue and red team is jumping on a wall.': 2, 'A board game with a ton of different characters.': 2, 'A board with a bunch of different characters on it.': 2, 'A blue and red model of a game of football.': 2, 'A group of people are playing a game of football.': 2, 'A group of kids playing with a prop.': 2, 'A blue and yellow model of a game.': 2, 'A group of soldiers are in a room with a fire.': 1, 'A group of soldiers in a room with a blue and red flag.': 1, 'A group of players are in a game of fetch.': 1, 'A group of players are in a room with a blue and red flag.': 1, 'A group of robots that are on a board.': 1, 'A group of blue and red lights are on a board game.': 1, 'A group of players in a game of soccer.': 1, 'A board with a bunch of different types of players.': 1, 'A group of players are building a game.': 1, 'A board with a bunch of different types of robots.': 1, 'A blue and red team is on a board.': 1, 'A board game with a bunch of different players.': 1, 'A group of robots that are on a board game.': 1, 'A group of players playing a game of baseball.': 1, 'A group of people playing a game on a board.': 1, 'A group of kids playing with a computer on a wall.': 1, 'A group of kids playing with their own computer chips.': 1, 'A board with a number of different types of power.': 1, 'A board game with a bunch of kids on it.': 1, 'A board game with a bunch of people playing.': 1, 'A board with a bunch of different types of blocks.': 1, 'A board game with a few players on it.': 1, 'A board with a bunch of players on it.': 1, 'A blue and red game of baseball on a board.': 1, 'A board game with a giant blue and red caps.': 1, 'A board with a bunch of blue and red caps.': 1, 'A board with a number of players on it.': 1, 'A board with a number of different colored lights on it.': 1, 'A blue wall with a blue LED lighting up.': 1, 'A blue and red board with a blue and red lights.': 1, 'A blue and red board with a bunch of lights on it.': 1, 'A blue bubble with a blue ball on it.': 1, 'A board with a lot of lights on it.': 1, 'A blue and red block with a blue and red team.': 1, 'A blue and red laser light is on a wall.': 1, 'A blue and red game with a lit bubble on top of it.': 1, 'A blue and red block with a blue and red LED.': 1, 'A blue and red block with a blue and red ball.': 1, 'A blue wall with a blue ball and a blue ball.': 1, 'A blue and red board with a blue and red team.': 1, 'A blue and red board with a blue and red player.': 1, 'A blue and red model of a game with a blue and red team.': 1, 'A team of players on a team of blue and red.': 1, 'A team of kids playing in a game of ice hockey.': 1, 'A blue and red model of a game with a blue and red player.': 1, 'A group of kids are playing with a game of baseball.': 1, 'A group of players on a team playing a game.': 1, 'A group of kids are jumping on a board game.': 1, 'A group of kids are playing with a game of football.': 1, 'A model of a game of baseball with a player on the ground.': 1, 'A team of players on a team of robots.': 1, 'A group of blue and red robots are on a team.': 1, 'A model of a game of football.': 1, 'A group of people are playing a game of defense.': 1, 'A group of people are playing a game of rock and roll.': 1, 'A group of kids playing with a computer on a floor.': 1, 'A group of kids are playing with a game of ping pong.': 1, 'A group of kids are playing with a video game.': 1, 'A fire hydrant is shown in a photo.': 1, 'A group of people are on a game of football.': 1, 'A group of kids are playing with a prop.': 1})

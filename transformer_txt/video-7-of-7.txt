@@ -1,0 +1,121 @@
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of players on a board game.
+A group of people are on a board game.
+A group of people are playing a game on a board.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of blue and yellow bricks are on a board.
+A group of kids are on a board game.
+A group of kids are on a board and a blue and red flag.
+A group of kids are playing with a computer.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are jumping on a fire in a building.
+A group of people are jumping on a computer.
+A group of people are jumping on a building.
+A blue and red model of a robot on a desk.
+A blue and red robot is on a floor.
+A blue and red model of a building with a fire in it.
+A group of people are on a building with a fire.
+A group of people are on a board game.
+A group of people are on a board game.
+A group of people are on a board in a room.
+A group of people are on a board game.
+A group of robots that are on a board.
+A group of blue and yellow robots are on a board.
+A group of people are on a board game.
+A blue and red team is on a floor.
+A blue and red model of a robot on a board.
+A blue model of a game board with a robot on it.
+A group of blue and yellow bricks are on a floor.
+A group of robots that are on a board.
+A group of blue and yellow bricks are on a floor.
+A group of blue and yellow bricks are on a floor.
+A group of blue and red bricks are on a floor.
+A group of blue and yellow robots are on a blue floor.
+A group of blue and red bricks are on a floor.
+A blue model of a game of tug.
+A group of blue and red bricks are on a board.
+A group of robots that are on a board.
+A group of robots that are on a board.
+A group of kids playing with a game board.
+A group of people are on a board game.
+A picture of a computer screen with a bunch of blocks.
+A picture of a game of ping pong on a table.
+A blue screen with a bunch of blocks on it.
+A board game is shown on a table.
+A model of a model of a building with a fire and a model of a model of a building.
+A model of a house with a fire and a model of a building.
+A drawing of a game board with a fire and a computer.
+A group of kids playing with a fire in a room.
+A model of a house with a fire and a forest.
+A model of a model of a house with trees and animals.
+A model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a
+A model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a
+A model of a real game scene with a fire and a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model
+A model of a real fire and ice building.
+A model of a game of dungeons and dragons.
+A large rock wall with a large bird in the background.
+A picture of a man with a board on his head.
+A picture of a skull and crossbones on a cell phone.
+A picture of a person sitting on a computer.
+A computer game card with a cartoon character.
+A cartoon character with a cell phone on a computer.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A picture of a computer and a cartoon character.
+A picture of a computer and a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+A computer game card with a cartoon character.
+Counter({'A computer game card with a cartoon character.': 51, 'A group of people are on a board game.': 16, 'A group of robots that are on a board.': 4, 'A group of blue and yellow bricks are on a floor.': 3, 'A group of blue and red bricks are on a floor.': 2, 'A model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a': 2, 'A picture of a computer and a cartoon character.': 2, 'A group of players on a board game.': 1, 'A group of people are playing a game on a board.': 1, 'A group of blue and yellow bricks are on a board.': 1, 'A group of kids are on a board game.': 1, 'A group of kids are on a board and a blue and red flag.': 1, 'A group of kids are playing with a computer.': 1, 'A group of people are jumping on a fire in a building.': 1, 'A group of people are jumping on a computer.': 1, 'A group of people are jumping on a building.': 1, 'A blue and red model of a robot on a desk.': 1, 'A blue and red robot is on a floor.': 1, 'A blue and red model of a building with a fire in it.': 1, 'A group of people are on a building with a fire.': 1, 'A group of people are on a board in a room.': 1, 'A group of blue and yellow robots are on a board.': 1, 'A blue and red team is on a floor.': 1, 'A blue and red model of a robot on a board.': 1, 'A blue model of a game board with a robot on it.': 1, 'A group of blue and yellow robots are on a blue floor.': 1, 'A blue model of a game of tug.': 1, 'A group of blue and red bricks are on a board.': 1, 'A group of kids playing with a game board.': 1, 'A picture of a computer screen with a bunch of blocks.': 1, 'A picture of a game of ping pong on a table.': 1, 'A blue screen with a bunch of blocks on it.': 1, 'A board game is shown on a table.': 1, 'A model of a model of a building with a fire and a model of a model of a building.': 1, 'A model of a house with a fire and a model of a building.': 1, 'A drawing of a game board with a fire and a computer.': 1, 'A group of kids playing with a fire in a room.': 1, 'A model of a house with a fire and a forest.': 1, 'A model of a model of a house with trees and animals.': 1, 'A model of a real game scene with a fire and a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model': 1, 'A model of a real fire and ice building.': 1, 'A model of a game of Dungeons and Dragons.': 1, 'A large rock wall with a large bird in the background.': 1, 'A picture of a man with a board on his head.': 1, 'A picture of a skull and crossbones on a cell phone.': 1, 'A picture of a person sitting on a computer.': 1, 'A cartoon character with a cell phone on a computer.': 1})

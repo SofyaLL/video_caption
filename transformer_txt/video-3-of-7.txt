@@ -1,0 +1,121 @@
+A group of people are standing on a floor.
+A group of people are standing on a floor.
+A group of kids playing on a computer.
+A group of kids playing with a computer on a field.
+A group of people are standing on a ground.
+A group of soldiers in a lab with a robot on the ground.
+A group of people playing a game of baseball.
+A group of people are playing a game of baseball.
+A group of people are standing on a floor.
+A group of people are standing on a floor.
+A group of people are standing on a floor.
+A group of people are standing on a floor.
+A group of people are standing on a floor.
+A group of people are sitting on a computer.
+A group of people are sitting on a computer.
+A group of people are on a computer playing a game.
+A group of people are standing on a floor.
+A group of people are standing on a floor.
+A group of people are standing on a computer.
+A group of people are standing on a floor.
+A group of people are standing on a floor.
+A group of people are playing a game of baseball.
+A group of people are standing on a floor.
+A group of kids playing with a computer on a floor.
+A group of people are standing on a floor.
+A group of kids playing with a computer on a floor.
+A group of kids playing with a computer on a floor.
+A group of kids playing with a computer on a floor.
+A group of kids playing with a computer on a floor.
+A group of people playing baseball on a computer.
+A group of people playing baseball on a computer.
+A group of characters are playing a game of baseball.
+A group of people are standing in a room.
+Three children playing with their toys on a board.
+A group of miniature robots that are standing in a room.
+A group of kids playing with a computer on a board.
+Three different video game characters are playing on a computer.
+Three lego figures are on a floor.
+Three kids are playing on a computer in a room.
+Three players on a board in a room.
+Three miniature robots are on a floor.
+Three different characters are playing on a computer.
+Three robots are standing in front of a computer.
+Three robots standing in a room with a computer on them.
+Three players are standing in a room with a computer.
+Three players are standing on a floor with a computer.
+Three different video game characters are standing in front of a computer.
+Three people standing in a room with a computer on them.
+A group of people playing a game of chess.
+Three people are standing on a computer screen.
+A group of people on a computer playing a game.
+Three people are playing a game on a computer.
+Three robots are on a floor in a lab.
+Three robots are standing in a lab.
+A group of robots that are on a computer.
+A robot is climbing on top of a wall.
+A picture of a robot that is on a board.
+A group of soldiers are on a computer playing a game.
+A group of actors in a lab with a robot on the ground.
+A group of three people on a computer screen.
+A group of robots are on a water slide.
+A group of robots that are on a blue water slide.
+A group of robots that are on a board.
+A group of kids are playing on a computer.
+A group of robots on a board game.
+A group of kids playing on a computer.
+A group of kids playing with a computer on a board.
+Three different models of a robot on a board.
+A group of robots that are on a computer.
+A group of actors playing a game of football.
+A group of actors playing a game of baseball.
+A group of robots that are standing in front of a computer.
+A group of robots that are standing in front of a computer.
+A group of heroes fighting in a lab.
+A group of soldiers in a room with a computer.
+A group of heroes in a lab with a robot on the floor.
+A group of soldiers are on a base.
+A group of robots that are standing in a lab.
+A group of soldiers are playing a game of tug and tug.
+A group of soldiers in a lab with a clock on it.
+A group of soldiers in a lab with a computer on the floor.
+A group of soldiers are standing in a lab.
+A group of actors playing a game of cat and mouse.
+Three people are playing with a computer game.
+Three children play with their toys in a lab.
+Three models of a toy robot fighting a human.
+Three different models of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of
+Three people are playing a game of baseball.
+Three people are playing a game of baseball.
+Three people are playing with a computer game.
+Three people are playing a game of baseball.
+Three people are playing a game of baseball.
+Three different characters are playing a game of baseball.
+A group of characters are playing a game of baseball.
+Three characters are playing a game of baseball.
+Three people are playing a game of baseball.
+A group of kids playing with a fire-powered baseball game.
+Three people are playing a game of fetch.
+Three people are playing a game of baseball.
+Three people are playing a game of baseball.
+Three people are playing a game of baseball.
+Three children play with their toys in a lab.
+Three children playing with their baseball bats in a lab.
+A group of people playing a game of baseball.
+A group of kids playing with a game of baseball.
+Three children play with a game of baseball.
+A group of kids playing with a game of baseball.
+A group of people playing a game of baseball.
+Two children playing video games in a living room.
+Three children play with their nintendo controllers in a lab.
+Two children playing video games in a living room.
+Two kids playing with their baseball bat in a lab.
+Three children play with a game of baseball.
+Three people are playing a game of baseball.
+A couple of kids playing video games in a lab.
+A group of people playing baseball on a floor.
+A group of kids playing baseball in a lab.
+Three children are playing with their toys in a lab.
+Three people are playing with their toys in a lab.
+Three children play with their toys in a lab.
+Counter({'A group of people are standing on a floor.': 13, 'Three people are playing a game of baseball.': 9, 'A group of kids playing with a computer on a floor.': 5, 'A group of people playing a game of baseball.': 3, 'Three children play with their toys in a lab.': 3, 'A group of kids playing on a computer.': 2, 'A group of people are playing a game of baseball.': 2, 'A group of people are sitting on a computer.': 2, 'A group of people playing baseball on a computer.': 2, 'A group of characters are playing a game of baseball.': 2, 'A group of kids playing with a computer on a board.': 2, 'A group of robots that are on a computer.': 2, 'A group of robots that are standing in front of a computer.': 2, 'Three people are playing with a computer game.': 2, 'A group of kids playing with a game of baseball.': 2, 'Three children play with a game of baseball.': 2, 'Two children playing video games in a living room.': 2, 'A group of kids playing with a computer on a field.': 1, 'A group of people are standing on a ground.': 1, 'A group of soldiers in a lab with a robot on the ground.': 1, 'A group of people are on a computer playing a game.': 1, 'A group of people are standing on a computer.': 1, 'A group of people are standing in a room.': 1, 'Three children playing with their toys on a board.': 1, 'A group of miniature robots that are standing in a room.': 1, 'Three different video game characters are playing on a computer.': 1, 'Three LEGO figures are on a floor.': 1, 'Three kids are playing on a computer in a room.': 1, 'Three players on a board in a room.': 1, 'Three miniature robots are on a floor.': 1, 'Three different characters are playing on a computer.': 1, 'Three robots are standing in front of a computer.': 1, 'Three robots standing in a room with a computer on them.': 1, 'Three players are standing in a room with a computer.': 1, 'Three players are standing on a floor with a computer.': 1, 'Three different video game characters are standing in front of a computer.': 1, 'Three people standing in a room with a computer on them.': 1, 'A group of people playing a game of chess.': 1, 'Three people are standing on a computer screen.': 1, 'A group of people on a computer playing a game.': 1, 'Three people are playing a game on a computer.': 1, 'Three robots are on a floor in a lab.': 1, 'Three robots are standing in a lab.': 1, 'A robot is climbing on top of a wall.': 1, 'A picture of a robot that is on a board.': 1, 'A group of soldiers are on a computer playing a game.': 1, 'A group of actors in a lab with a robot on the ground.': 1, 'A group of three people on a computer screen.': 1, 'A group of robots are on a water slide.': 1, 'A group of robots that are on a blue water slide.': 1, 'A group of robots that are on a board.': 1, 'A group of kids are playing on a computer.': 1, 'A group of robots on a board game.': 1, 'Three different models of a robot on a board.': 1, 'A group of actors playing a game of football.': 1, 'A group of actors playing a game of baseball.': 1, 'A group of heroes fighting in a lab.': 1, 'A group of soldiers in a room with a computer.': 1, 'A group of heroes in a lab with a robot on the floor.': 1, 'A group of soldiers are on a base.': 1, 'A group of robots that are standing in a lab.': 1, 'A group of soldiers are playing a game of tug and tug.': 1, 'A group of soldiers in a lab with a clock on it.': 1, 'A group of soldiers in a lab with a computer on the floor.': 1, 'A group of soldiers are standing in a lab.': 1, 'A group of actors playing a game of cat and mouse.': 1, 'Three models of a toy robot fighting a human.': 1, 'Three different models of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of a model of': 1, 'Three different characters are playing a game of baseball.': 1, 'Three characters are playing a game of baseball.': 1, 'A group of kids playing with a fire-powered baseball game.': 1, 'Three people are playing a game of fetch.': 1, 'Three children playing with their baseball bats in a lab.': 1, 'Three children play with their Nintendo controllers in a lab.': 1, 'Two kids playing with their baseball bat in a lab.': 1, 'A couple of kids playing video games in a lab.': 1, 'A group of people playing baseball on a floor.': 1, 'A group of kids playing baseball in a lab.': 1, 'Three children are playing with their toys in a lab.': 1, 'Three people are playing with their toys in a lab.': 1})
