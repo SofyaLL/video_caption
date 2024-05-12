@@ -1,43 +1,46 @@
-import cv2
-from transformers import GPT2Tokenizer
-import clip
-from util import ClipCaptionPrefix
 import os
+import traceback
 from collections import Counter
 
-import skimage.io as io
+import clip
+import cv2
+import numpy as np
 import PIL.Image
+import skimage.io as io
 import torch
-device = 'cpu'
-CPU = torch.device('cpu')
-from tqdm import tqdm, trange
 import torch.nn.functional as nnf
+from PIL import Image
+from tqdm import tqdm, trange
+from transformers import GPT2Tokenizer
+
+from utils import ClipCaptionModel, ClipCaptionPrefix, get_name
+
+device = "cpu"
+CPU = torch.device("cpu")
 
 prefix_length = 10
-model_path = './transformer_weights.pt'
+model_path = "/Users/sonya/PycharmProjects/CLIP_prefix_caption/pretrained_models/coco_weights.pt"
 
-clip_model, preprocess = clip.load("RN50x4", device=device, jit=False)
+clip_model, preprocess = clip.load("ViT-B/32", device=device, jit=False)
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
-prefix_length = 40
-
-model = ClipCaptionPrefix(prefix_length, clip_length=40, prefix_size=640,
-                                  num_layers=8, mapping_type='transformer')
+model = ClipCaptionModel(prefix_length)
 model.load_state_dict(torch.load(model_path, map_location=CPU))
 model = model.eval()
 model = model.to(device)
 
+
 def generate2(
-        model,
-        tokenizer,
-        tokens=None,
-        prompt=None,
-        embed=None,
-        entry_count=1,
-        entry_length=67,  # maximum number of words
-        top_p=0.8,
-        temperature=1.,
-        stop_token: str = '.',
+    model,
+    tokenizer,
+    tokens=None,
+    prompt=None,
+    embed=None,
+    entry_count=1,
+    entry_length=67,  # maximum number of words
+    top_p=0.8,
+    temperature=1.0,
+    stop_token: str = ".",
 ):
     model.eval()
     generated_num = 0
@@ -66,9 +69,7 @@ def generate2(
                 sorted_logits, sorted_indices = torch.sort(logits, descending=True)
                 cumulative_probs = torch.cumsum(nnf.softmax(sorted_logits, dim=-1), dim=-1)
                 sorted_indices_to_remove = cumulative_probs > top_p
-                sorted_indices_to_remove[..., 1:] = sorted_indices_to_remove[
-                                                    ..., :-1
-                                                    ].clone()
+                sorted_indices_to_remove[..., 1:] = sorted_indices_to_remove[..., :-1].clone()
                 sorted_indices_to_remove[..., 0] = 0
 
                 indices_to_remove = sorted_indices[sorted_indices_to_remove]
@@ -90,10 +91,8 @@ def generate2(
     return generated_list[0]
 
 
-def predict(path_img):
-    image = io.imread(path_img)
-    pil_image = PIL.Image.fromarray(image)
-    image = preprocess(pil_image).unsqueeze(0).to('cpu')
+def predict(image: Image.Image):
+    image = preprocess(image).unsqueeze(0).to("cpu")
     with torch.no_grad():
         prefix = clip_model.encode_image(image).to(device, dtype=torch.float32)
         prefix = prefix / prefix.norm(2, -1).item()
@@ -102,56 +101,60 @@ def predict(path_img):
     return generated_text_prefix
 
 
-if __name__ == '__main__':
-    for n in range(1, 5):
-    # n = 1
-        path_video = f'./ozon_videos/video-{n}-of-4.mp4'
-        path_txt = f'./transformer_txt_ozon/video-{n}-of-4.txt'
-        path_video_new = f'./new_videos_ozon/cap-video-{n}-of-4.mp4'
-        cap = cv2.VideoCapture(path_video)
-        fps = cap.get(5)
-        width = cap.get(3)
-        height = cap.get(4)
+if __name__ == "__main__":
+    video_path = "_input/township-10477v1_part.mp4"
+    video_name = get_name(video_path)
+    txt_path = f"_output/{video_name}.txt"
+    frame_paths = f"_output/{video_name}_frames"
+    os.makedirs(frame_paths, exist_ok=True)
+    new_video_path = f"_output/captioned_{video_name}.mp4"
 
-        count_frame = 0
-        result_list = []
-        output_file = open(path_txt, 'w')
+    cap = cv2.VideoCapture(video_path)
+    fps = cap.get(5)
+    width = cap.get(3)
+    height = cap.get(4)
 
-        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-        frameSize = (int(width), int(height))
-        # x, y, w, h = 185, 160, 346, 180
-        # bb = ((x, y), (x + w, y + h))
+    count_frame = 0
+    result_list = []
+    output_file = open(txt_path, "w")
 
-        new_video = cv2.VideoWriter(path_video_new, fourcc=fourcc, fps=fps, apiPreference=0,
-                                    frameSize=frameSize)
+    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+    frameSize = (int(width), int(height))
 
-        COLOR = (255, 255, 255)
+    new_video = cv2.VideoWriter(new_video_path, fourcc=fourcc, fps=fps, apiPreference=0, frameSize=frameSize)
 
-        while True:
-            ret, frame = cap.read()
-            path_img = f'./frames/{count_frame}.jpg'
+    COLOR = (255, 255, 255)
 
-            if not ret:
-                break
+    while True:
+        ret, frame = cap.read()
 
-            try:
-                # frame_cut = frame[bb[0][1]:bb[1][1], bb[0][0]:bb[1][0]]
-                cv2.imwrite(path_img, frame)
-                generated_text_prefix = predict(path_img)
-                print(generated_text_prefix)
-                result_list.append(generated_text_prefix)
-                print(generated_text_prefix.capitalize(), file=output_file)
+        if not ret:
+            break
 
-                cv2.putText(frame, generated_text_prefix, (50, int(height) - 30), cv2.FONT_HERSHEY_SIMPLEX,
-                            2, COLOR, 2)
-                # cv2.rectangle(frame, (int(bb[0][0]), int(bb[0][1])), (int(bb[1][0]), int(bb[1][1])),
-                #               COLOR, 1)
-            except:
-                pass
+        try:
+            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            frame_pil = Image.fromarray(frame_rgb)
+            generated_text_prefix = predict(frame_pil)
+            print(generated_text_prefix)
+            result_list.append(generated_text_prefix)
+            print(generated_text_prefix.capitalize(), file=output_file)
 
-            new_video.write(frame)
-            count_frame += 1
+            cv2.putText(
+                frame,
+                generated_text_prefix,
+                (50, int(height) - 30),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                2,
+                COLOR,
+                2,
+            )
+        except:
+            print(traceback.format_exc())
 
-        print(Counter(result_list), file=output_file)
-        output_file.close()
+        cv2.imshow("Frame", frame)
+        if cv2.waitKey(1) & 0xFF == ord("q"):
+            break
 
+        new_video.write(frame)
+        count_frame += 1
+        print(f"Processed {count_frame} frames")
