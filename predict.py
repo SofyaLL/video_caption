@@ -1,44 +1,21 @@
-# Prediction interface for Cog ⚙️
-# Reference: https://github.com/replicate/cog/blob/main/docs/python.md
-
-import os
-import sys
-from typing import List, Optional, Tuple, Union
+from enum import Enum
 
 import clip
 import numpy as np
-import PIL.Image
 import skimage.io as io
 import torch
 import torch.nn.functional as nnf
 from PIL import Image
 from torch import nn
-from transformers import (
-    AdamW,
-    GPT2LMHeadModel,
-    GPT2Tokenizer,
-    get_linear_schedule_with_warmup,
-)
+from transformers import GPT2Tokenizer
 
-# import torch
+from model import ClipCaptionModel
 
-N = type(None)
-V = np.array
-ARRAY = np.ndarray
-ARRAYS = Union[Tuple[ARRAY, ...], List[ARRAY]]
-VS = Union[Tuple[V, ...], List[V]]
-VN = Union[V, N]
-VNS = Union[VS, N]
-T = torch.Tensor
-TS = Union[Tuple[T, ...], List[T]]
-TN = Optional[T]
-TNS = Union[Tuple[TN, ...], List[TN]]
-TSN = Optional[TS]
-TA = Union[T, ARRAY]
-
-WEIGHTS_PATHS = {
+WEIGHTS_TYPE = {
     "coco": "pretrained_models/coco_weights.pt",
     "conceptual-captions": "pretrained_models/conceptual_weights.pt",
+    "trained_mlp": "trained_models/mlp-model-bs8-e5-004.pt",
+    "trained_transformer": "trained_models/transformer-model-bs10-e5-004.pt",
 }
 
 D = torch.device
@@ -46,106 +23,40 @@ CPU = torch.device("cpu")
 
 
 class Predictor:
-    def setup(self):
+    def __init__(self, model_type: str):
         """Load the model into memory to make running multiple predictions efficient"""
         self.device = torch.device("cpu")
-        self.clip_model, self.preprocess = clip.load("ViT-B/32", device=self.device, jit=False)
+
+        if "transformer" in model_type:
+            self.clip_model, self.preprocess = clip.load("RN50x4", device=self.device, jit=False)
+            self.prefix_length = 40
+            self.model = ClipCaptionModel(
+                self.prefix_length, clip_length=40, prefix_size=640, num_layers=8, mapping_type="transformer"
+            )
+            self.model.load_state_dict(torch.load(WEIGHTS_TYPE[model_type], map_location=CPU))
+            self.model = self.model.eval()
+            self.model = self.model.to(self.device)
+
+        else:
+            self.clip_model, self.preprocess = clip.load("ViT-B/32", device=self.device, jit=False)
+            self.prefix_length = 10
+            self.model = ClipCaptionModel(self.prefix_length)
+            self.model.load_state_dict(torch.load(WEIGHTS_TYPE[model_type], map_location=CPU))
+            self.model = self.model.eval()
+            self.model = self.model.to(self.device)
+
         self.tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
-        self.models = {}
-        self.prefix_length = 10
-        for key, weights_path in WEIGHTS_PATHS.items():
-            model = ClipCaptionModel(self.prefix_length)
-            model.load_state_dict(torch.load(weights_path, map_location=CPU))
-            model = model.eval()
-            model = model.to(self.device)
-            self.models[key] = model
-
-    # @cog.input("image", type=cog.Path, help="Input image")
-    # @cog.input(
-    #     "model",
-    #     type=str,
-    #     options=WEIGHTS_PATHS.keys(),
-    #     default="coco",
-    #     help="Model to use",
-    # )
-    # @cog.input(
-    #     "use_beam_search",
-    #     type=bool,
-    #     default=False,
-    #     help="Whether to apply beam search to generate the output text",
-    # )
-    def predict(self, image: Image.Image, model, use_beam_search):
+    def predict(self, image: Image.Image, use_beam_search: bool = False):
         """Run a single prediction on the model"""
-        model = self.models[model]
-        pil_image = PIL.Image.fromarray(image)
-        image = self.preprocess(pil_image).unsqueeze(0).to(self.device)
+        image = self.preprocess(image).unsqueeze(0).to(self.device)
         with torch.no_grad():
             prefix = self.clip_model.encode_image(image).to(self.device, dtype=torch.float32)
-            prefix_embed = model.clip_project(prefix).reshape(1, self.prefix_length, -1)
+            prefix_embed = self.model.clip_project(prefix).reshape(1, self.prefix_length, -1)
         if use_beam_search:
-            return generate_beam(model, self.tokenizer, embed=prefix_embed)[0]
+            return generate_beam(self.model, self.tokenizer, embed=prefix_embed)[0]
         else:
-            return generate2(model, self.tokenizer, embed=prefix_embed)
-
-
-class MLP(nn.Module):
-    def forward(self, x: T) -> T:
-        return self.model(x)
-
-    def __init__(self, sizes: Tuple[int, ...], bias=True, act=nn.Tanh):
-        super(MLP, self).__init__()
-        layers = []
-        for i in range(len(sizes) - 1):
-            layers.append(nn.Linear(sizes[i], sizes[i + 1], bias=bias))
-            if i < len(sizes) - 2:
-                layers.append(act())
-        self.model = nn.Sequential(*layers)
-
-
-class ClipCaptionModel(nn.Module):
-
-    # @functools.lru_cache #FIXME
-    def get_dummy_token(self, batch_size: int, device: D) -> T:
-        return torch.zeros(batch_size, self.prefix_length, dtype=torch.int64, device=device)
-
-    def forward(self, tokens: T, prefix: T, mask: Optional[T] = None, labels: Optional[T] = None):
-        embedding_text = self.gpt.transformer.wte(tokens)
-        prefix_projections = self.clip_project(prefix).view(-1, self.prefix_length, self.gpt_embedding_size)
-        # print(embedding_text.size()) #torch.Size([5, 67, 768])
-        # print(prefix_projections.size()) #torch.Size([5, 1, 768])
-        embedding_cat = torch.cat((prefix_projections, embedding_text), dim=1)
-        if labels is not None:
-            dummy_token = self.get_dummy_token(tokens.shape[0], tokens.device)
-            labels = torch.cat((dummy_token, tokens), dim=1)
-        out = self.gpt(inputs_embeds=embedding_cat, labels=labels, attention_mask=mask)
-        return out
-
-    def __init__(self, prefix_length: int, prefix_size: int = 512):
-        super(ClipCaptionModel, self).__init__()
-        self.prefix_length = prefix_length
-        self.gpt = GPT2LMHeadModel.from_pretrained("gpt2")
-        self.gpt_embedding_size = self.gpt.transformer.wte.weight.shape[1]
-        if prefix_length > 10:  # not enough memory
-            self.clip_project = nn.Linear(prefix_size, self.gpt_embedding_size * prefix_length)
-        else:
-            self.clip_project = MLP(
-                (
-                    prefix_size,
-                    (self.gpt_embedding_size * prefix_length) // 2,
-                    self.gpt_embedding_size * prefix_length,
-                )
-            )
-
-
-class ClipCaptionPrefix(ClipCaptionModel):
-    def parameters(self, recurse: bool = True):
-        return self.clip_project.parameters()
-
-    def train(self, mode: bool = True):
-        super(ClipCaptionPrefix, self).train(mode)
-        self.gpt.eval()
-        return self
+            return generate2(self.model, self.tokenizer, embed=prefix_embed)
 
 
 def generate_beam(
@@ -154,7 +65,7 @@ def generate_beam(
     beam_size: int = 5,
     prompt=None,
     embed=None,
-    entry_length=67,
+    entry_length=25,
     temperature=1.0,
     stop_token: str = ".",
 ):
@@ -225,10 +136,10 @@ def generate2(
     model,
     tokenizer,
     tokens=None,
-    prompt=None,
+    prompt="image caption",
     embed=None,
     entry_count=1,
-    entry_length=67,  # maximum number of words
+    entry_length=25,  # maximum number of words
     top_p=0.8,
     temperature=1.0,
     stop_token: str = ".",
