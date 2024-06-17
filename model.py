@@ -1,22 +1,13 @@
 import functools
 import os
-import sys
 from enum import Enum
 from typing import List, Optional, Tuple, Union
 
 import numpy as np
-import PIL.Image
-import skimage.io as io
 import torch
 import torch.nn.functional as nnf
 from torch import nn
-from tqdm import tqdm, trange
-from transformers import (
-    AdamW,
-    GPT2LMHeadModel,
-    GPT2Tokenizer,
-    get_linear_schedule_with_warmup,
-)
+from transformers import GPT2LMHeadModel
 
 N = type(None)
 V = np.array
@@ -44,11 +35,6 @@ def get_device(device_id: int) -> D:
 
 
 CUDA = get_device
-
-current_directory = os.getcwd()
-save_path = os.path.join(os.path.dirname(current_directory), "pretrained_models")
-os.makedirs(save_path, exist_ok=True)
-model_path = os.path.join(save_path, "model_wieghts.pt")
 
 
 class MappingType(Enum):

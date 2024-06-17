@@ -25,7 +25,7 @@ CPU = torch.device("cpu")
 class Predictor:
     def __init__(self, model_type: str):
         """Load the model into memory to make running multiple predictions efficient"""
-        self.device = torch.device("cpu")
+        self.device = torch.device("mps")
 
         if "transformer" in model_type:
             self.clip_model, self.preprocess = clip.load("RN50x4", device=self.device, jit=False)
@@ -65,7 +65,7 @@ def generate_beam(
     beam_size: int = 5,
     prompt=None,
     embed=None,
-    entry_length=25,
+    entry_length=20,
     temperature=1.0,
     stop_token: str = ".",
 ):
@@ -136,10 +136,10 @@ def generate2(
     model,
     tokenizer,
     tokens=None,
-    prompt="image caption",
+    prompt=None,
     embed=None,
     entry_count=1,
-    entry_length=25,  # maximum number of words
+    entry_length=20,
     top_p=0.8,
     temperature=1.0,
     stop_token: str = ".",
