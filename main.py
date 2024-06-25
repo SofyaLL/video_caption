@@ -7,7 +7,7 @@ from PIL import Image
 from predict import Predictor
 from utils import add_banner_text_to_frame, get_name
 
-default_video = "_input/township-10477v1_part.mp4"
+default_video = "_input/test_promo_video.mp4"
 
 
 def parse_arguments():

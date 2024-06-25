@@ -1,0 +1,7 @@
+loguru
+scikit-image
+opencv-python
+transformers~=4.10.2
+ftfy
+regex
+tqdm

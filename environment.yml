@@ -1,14 +1,15 @@
-name: clip_prefix_caption
+name: video_caption
 channels:
   - defaults
 dependencies:
-- python>=3.8
+- python>=3.8,<3.11
 - pip>=21
 - scikit-image
 - pip:
-   - opencv-python
    - transformers~=4.10.2
+   - opencv-python
    - ftfy
    - regex
    - tqdm
+   - loguru
    - git+https://github.com/openai/CLIP.git

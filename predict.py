@@ -1,21 +1,17 @@
-from enum import Enum
-
 import clip
 import numpy as np
-import skimage.io as io
 import torch
 import torch.nn.functional as nnf
 from PIL import Image
-from torch import nn
 from transformers import GPT2Tokenizer
 
 from model import ClipCaptionModel
 
 WEIGHTS_TYPE = {
-    "coco": "pretrained_models/coco_weights.pt",
-    "conceptual-captions": "pretrained_models/conceptual_weights.pt",
-    "trained_mlp": "trained_models/mlp-model-bs8-e5-004.pt",
-    "trained_transformer": "trained_models/transformer-model-bs10-e5-004.pt",
+    "coco": "weights/coco_weights.pt",
+    "conceptual-captions": "weights/conceptual_weights.pt",
+    "trained_mlp": "weights/trained_mlp.pt",
+    "trained_transformer": "weights/trained_transformer.pt",
 }
 
 D = torch.device
@@ -25,7 +21,7 @@ CPU = torch.device("cpu")
 class Predictor:
     def __init__(self, model_type: str):
         """Load the model into memory to make running multiple predictions efficient"""
-        self.device = torch.device("mps")
+        self.device = CPU
 
         if "transformer" in model_type:
             self.clip_model, self.preprocess = clip.load("RN50x4", device=self.device, jit=False)
