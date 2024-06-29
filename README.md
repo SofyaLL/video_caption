@@ -7,7 +7,11 @@ This project is based on [CLIP prefix captioning](https://github.com/rmokady/CLI
 
 There are pretrained weights from [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) project as well as weights obtained by training on a private dataset. The dataset consists of frames from mobile video game ads along with their human-generated captions. The training was conducted using the [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) code.
 
-The current version of project works on CPU.   
+The current version of project works on CPU.  
+
+<kbd>
+<img src="images/example_1.png" width=40% height=50%>
+</kbd>
 
 ## Download weights
 
