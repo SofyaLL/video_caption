@@ -1,4 +1,5 @@
 import argparse
+import os
 
 import cv2
 from loguru import logger
@@ -7,7 +8,7 @@ from PIL import Image
 from predict import Predictor
 from utils import add_banner_text_to_frame, get_name
 
-default_video = "_input/test_promo_video.mp4"
+default_video = "_input/test_promo_video.mp4"  # TODO change path
 
 
 def parse_arguments():
@@ -28,9 +29,11 @@ def parse_arguments():
 def main():
     args = parse_arguments()
     video_name = get_name(args.input_file)
-    new_video_path = (
-        args.output_file if args.output_file else f"_output/captioned_{video_name}_{args.model_type}.mp4"
-    )
+    if args.output_file:
+        new_video_path = args.output_file
+    else:
+        os.makedirs("_output", exist_ok=True)
+        new_video_path = f"_output/captioned_{video_name}_{args.model_type}.mp4"
 
     logger.info(f"Input file: {args.input_file}")
     logger.info(f"Output file: {new_video_path}")

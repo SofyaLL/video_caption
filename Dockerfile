@@ -23,8 +23,4 @@ RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 RUN python -m pip install git+https://github.com/openai/CLIP.git
 
-RUN apt-get install wget  -y
-RUN mkdir -p /root/.cache/clip
-RUN wget -O /root/.cache/clip/ViT-B-32.pt "https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt"
-
 COPY . .
