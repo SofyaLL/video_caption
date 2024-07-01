@@ -10,7 +10,8 @@ There are pretrained weights from [ClipCap](https://github.com/rmokady/CLIP_pref
 The current version of project works on CPU.  
 
 <kbd>
-<img src="images/example_1.png" width=40% height=50%>
+<img src="images/example.png" height=50%>
+<em>Examples</em>
 </kbd>
 
 ## Download weights

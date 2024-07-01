@@ -3,10 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.DS_Store
-.code-workspace
+*.code-workspace
 
 # Jupyter Notebook
-.ipynb_checkpoints
+*.ipynb_checkpoints
 
 _input/
 _output/
