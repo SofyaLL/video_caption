@@ -50,7 +50,7 @@ python main.py [--input_file INPUT_FILE] [--output_file OUTPUT_FILE] [--model_ty
 
 - `--input_file`: Path to the input video file. (Default: test_promo_video.mp4)
   
-- `--output_file`: Path to save the output video file. If not specified, the output file will be saved as `_output/captioned_{input_file_name}_{model_type}.mp4`.
+- `--output_file`: Path to save the output video file. If not specified, the output file will be saved as `_output/captioned_{input_file_name}_{model_type}.mp4`
 
 - `--model_type`: Type of model to use for prediction. Choices are coco, conceptual-captions, trained_mlp, trained_transformer. (Default: trained_mlp)
 
