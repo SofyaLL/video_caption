@@ -3,14 +3,14 @@
 
 This project allows to create videos with frame-by-frame descriptions. The original video will be processed, and a block with a description of the scene will be added to the bottom of each frame.
 
-This project is based on [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) project. It is a part of my previous job. The goal was to get precise captions of promo clips, mostly for mobile video games. Although I didn't check metrics, the ClipCap model trained on the COCO dataset seemed to work well. Additionally, I fine-tuned the model on a private dataset. You can check the caption capability depending on weights by using the `model_type` argument. Fine-tuned weights are `trained_mlp` and `trained_transformer`
+This project is based on [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) project. It is a part of my previous job. The goal was to get precise captions of promo clips, mostly for mobile video games. Although I didn't check metrics, the ClipCap model trained on the COCO dataset seemed to work well. Additionally, I fine-tuned the model on a private dataset. You can check the caption capability depending on weights by using the `model_type` argument. Fine-tuned weights are `trained_mlp` and `trained_transformer`.
 
-There are pretrained weights from [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) project as well as weights obtained by training on a private dataset. The dataset consists of frames from mobile video game ads along with their human-generated captions. The training was conducted using the [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) code.
+There are pretrained weights from [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) project as well as weights obtained by training on a private dataset. The dataset consisted of frames from mobile video game ads along with their human-generated captions. The training was conducted using the [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) code.
 
 The current version of project works on CPU.  
 
 <kbd>
-<img src="images/example.png" height=50%>
+<img src="images/example.png" width="500">
 <em>Examples</em>
 </kbd>
 
